@@ -6,21 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .bg-aikini-color {
+            background-color: #1263BB;
+        }
+
+        .link-primary {
+            color: #1263BB;
+        }
+        .btn-primary {
+            background-color: #1263BB;
+            border-color: #1263BB;
+        }
+
+    </style>
 <script defer src="index.js"></script></head>
 <body>
-    <div class="container">
-        <h1 class="text-center">READMORE VANILLA JS</h1>
-        <br><br>
-        <div class="row justify-content-center">
-            <div class="col-6">
-                <h2>Demo</h2>
-                <div class="content" data-readmore>
-                    <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a euismod congue, quam ante molestie nibh, non auctor nibh leo eget nisi. Sed eget neque euismod, viverra augue id, feugiat nibh.
-                    </span>
+    <main>
+        <div class="px-4 py-5 mb-5 text-center bg-aikini-color text-white">
+            <div class="d-block mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="125" height="67" viewBox="0 0 242.22 129.82" class="max-w-7.8125"><g id="logo_aikini_header" data-name="logo_aikini_header"><path fill="#FFFFFF" d="M30.31 72.28v-9.9a19.22 19.22 0 0 0-.69-3.79c-.69-2.3-2.07-4-4.95-4-5.64 0-6.56 5.64-6.56 10.24 0 3.68-4.71 4.83-7.24 4.83S4 68.6 4 64.92c0-11.05 11.7-14.5 20.9-14.5 11.74 0 19.56 5.41 19.56 17.26v29.45c0 .34.11.8.11 1.15.23.69.58 1 1.27 1a3.57 3.57 0 0 0 2.19-1l.46-.35 2.3 2.88-.23.23c-2.65 3.68-6.79 5.06-11.28 5.06a8.41 8.41 0 0 1-7.48-3.8c-3.33 3.11-7.48 4.26-12 4.26-10.12 0-18.75-5.63-18.75-16.33 0-12.32 9.54-19.1 21.51-19.1a22 22 0 0 1 7.75 1.15Zm0 4.25a8.06 8.06 0 0 0-2.88-.46c-8.51 0-11.62 7.14-11.62 14.5 0 5.29 1.38 11.16 7.48 11.16 3.22 0 7-2.3 7-5.52ZM81.16 38.91A2.43 2.43 0 0 0 81 38c-.11-.34-.23-.46-.34-.46-.58 0-1.5.58-2.76 1.61s-2.88 2.42-4.61 3.8c-3.29 2.75-7.43 5.63-11.23 5.63-5.29 0-10-3-10-8.74 0-2.77 1.61-6.33 5.18-6.56h.23l.11.23c1.38 2 4 2.3 6.45 2.3 9.43 0 22.78-5.87 30.6-10.82l.69-.46v49.36h1.15l10.7-9.09c2.07-1.49 5.06-4.6 5.06-7 0-1.26-1-2.07-2.42-2.41l-.34-.12v-4.16h20.71v4.26h-.46c-2.76 0-7.25 2.76-11.85 6.21-4.26 3.22-8.29 6.9-10.7 9l18.41 25.54c2.18 2.88 4.37 5.06 8.05 5.06h.46v4.38H106.7v-4.38h.46c1.61 0 3.1-.46 3.1-1.72a3.05 3.05 0 0 0-.34-1.38c-.35-.58-.69-1-1-1.5l-13.5-18.43h-.11v18.17c0 3.68 1.15 4.83 5 4.83h.46v4.38h-49v-4.38h.45c3.8 0 5-1.15 5-4.83v-29.8c0-3.56-1.15-4.83-5-4.83h-.45v-4.25l19.55-6v44.88c0 3.68 1.16 4.83 4.95 4.83s5-1.15 5-4.83Z"></path> <path fill="#FFFFFF" d="M134.08 101.15h.46c3.8 0 5-1.15 5-4.83v-29.8c0-3.56-1.15-4.83-5-4.83h-.46v-4.25l19.56-6v44.88c0 3.68 1.15 4.83 5 4.83h.46v4.38h-25Zm19.56-61.66a9.32 9.32 0 0 1-9 9.09 9.16 9.16 0 0 1-9-9.09 9 9 0 0 1 9-8.86 9.12 9.12 0 0 1 9 8.86ZM178.71 96.32c0 3.68 1.16 4.83 4.95 4.83h.46v4.38h-25v-4.38h.46c3.79 0 4.95-1.15 4.95-4.83v-29.8c0-3.56-1.16-4.83-4.95-4.83h-.46v-4.25l19.55-6v4.61c3.69-4.26 9.44-5.64 15-5.64 10.36 0 17.84 5.18 17.84 15.88v39c0 6.32.8 19.21 9.31 19.21 5.64 0 8.06-8.05 7.94-12.89v-.11l.12-.12a6.07 6.07 0 0 1 5.4-2.87 7.61 7.61 0 0 1 7.94 7.94c0 5.86-5.41 10-10.58 11.61a31.56 31.56 0 0 1-7.94 1.16h-.23c-15.53 0-26.23-11.28-26.23-26.24V66.52c0-5.29-2.65-10.81-8.63-10.81-5.06 0-9.9 6.1-9.9 10.81Z"></path> <path fill="#FFFFFF" d="M217.14 101.15h.46c3.8 0 5-1.15 5-4.83v-29.8c0-3.56-1.15-4.83-5-4.83h-.46v-4.25l19.56-6v44.88c0 3.68 1.15 4.83 5 4.83h.46v4.38h-25ZM2.07 116.36l3.3 8.45 3.44-9.07 3.29 9.07 3.5-8.45h2.08L12 129.81l-3.25-9-3.39 9L0 116.36ZM35.56 118.15h-5.07v3h4.92V123h-4.92v4.23h5.07V129h-7v-12.64h7ZM47.4 129v-12.64h1.9a8.51 8.51 0 0 1 2 .19 3.2 3.2 0 0 1 1.28.67 3.39 3.39 0 0 1 .85 1.2 3.72 3.72 0 0 1 .32 1.48 3 3 0 0 1-1 2.3 3.09 3.09 0 0 1 1.59 1.2 3.43 3.43 0 0 1 .59 2 3.38 3.38 0 0 1-1.05 2.51 3.42 3.42 0 0 1-1.42.87 8.15 8.15 0 0 1-2.16.24Zm1.91-7.22h.6a2.22 2.22 0 0 0 1.56-.47 1.83 1.83 0 0 0 .5-1.39 1.76 1.76 0 0 0-.51-1.36 2.17 2.17 0 0 0-1.48-.46h-.67Zm0 5.43h1.18a2.92 2.92 0 0 0 1.9-.51 1.75 1.75 0 0 0 .64-1.4 1.77 1.77 0 0 0-.61-1.37 3.18 3.18 0 0 0-2.14-.55h-1ZM86.14 122l2.28 2.75.07-.08.7-.78q.33-.39.63-.78l1.25 1.28c-.16.21-.36.47-.61.76s-.54.62-.89 1l2.35 2.85h-2.38l-1.26-1.55a5 5 0 0 1-3.61 1.8 4.07 4.07 0 0 1-2.86-1.08 3.53 3.53 0 0 1-1.14-2.67 3.71 3.71 0 0 1 1.82-3.15l.82-.56h.06l.12-.09a3.91 3.91 0 0 1-1.26-2.7 2.74 2.74 0 0 1 .84-2.08 3.37 3.37 0 0 1 4.35 0 2.55 2.55 0 0 1 .85 2 2.46 2.46 0 0 1-.47 1.48 8 8 0 0 1-1.66 1.6Zm-1.52 1-.1.08a9 9 0 0 0-1.6 1.3 1.6 1.6 0 0 0-.42 1 2 2 0 0 0 .63 1.44 2.07 2.07 0 0 0 1.45.64 4 4 0 0 0 2.54-1.46Zm.41-2.41.16-.12c.27-.2.49-.38.66-.53a2.23 2.23 0 0 0 .38-.38 1.16 1.16 0 0 0 .25-.74 1 1 0 0 0-.34-.81 1.25 1.25 0 0 0-.9-.32 1.28 1.28 0 0 0-.87.32 1 1 0 0 0-.35.78 1.76 1.76 0 0 0 .44 1.1l.48.57a.5.5 0 0 0 .06.17ZM120.77 118.15V129h-1.91v-10.85H116v-1.79h7.72v1.79ZM141.68 118.15h-5.07v3h4.93V123h-4.93v4.23h5.07V129h-7v-12.64h7ZM162.87 117v2.26a5.3 5.3 0 0 0-3.42-1.39 4.36 4.36 0 0 0-3.29 1.41 4.72 4.72 0 0 0-1.34 3.41 4.62 4.62 0 0 0 1.34 3.35 4.43 4.43 0 0 0 3.3 1.37 4.17 4.17 0 0 0 1.71-.32 4.75 4.75 0 0 0 .81-.45 9 9 0 0 0 .89-.67v2.3a6.87 6.87 0 0 1-3.44.93 6.49 6.49 0 0 1-6.54-6.5 6.47 6.47 0 0 1 1.6-4.31 6.57 6.57 0 0 1 8.38-1.39ZM176.88 121.31h5.45v-5h1.91V129h-1.91v-5.9h-5.45v5.9H175v-12.64h1.91Z"></path> <path fill="#5bbdb3" d="M238.26 8.86a9.32 9.32 0 0 1-9 9.09 9.16 9.16 0 0 1-9-9.09 9 9 0 0 1 9-8.86 9.11 9.11 0 0 1 9 8.86Z"></path></g></svg>
+            </div>
+            <h1 class="display-5 fw-bold">READMORE VANILLA JS</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">
+                    The Readmore.js class is a JavaScript class that is used to create a "read more" functionality on a webpage. 
+                    It allows users to view a shortened version of a piece of text and then expand it to view the full text by clicking a "read more" button.
+                </p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="#demo" class="btn btn-outline-secondary btn-lg px-4 gap-3 text-white border-white">Basic Demo</a>
+              </div>
+            </div>
+        </div>
+
+
+        <div id="demo" class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="card">
+                        <h5 class="card-header">Basic demo</h5>
+                        <div class="card-body">
+                          <h5 class="card-title">L'AGENCE</h5>
+                            <div class="card-text content" data-readmore='{
+                                    "buttonClasses":"link-primary",
+                                    "lessLink":"Voir moins",
+                                    "moreLink":"Lire la suite"
+                                }'>
+                                <span>
+                                    L’agence Aikini Web & Tech vous propose un accompagnement complet pour la réalisation de votre projet digital.
+                                    <br> <br>
+                                    Conseil, hébergement, développement, UI/UX design et acquisition de trafic... nous déployons toute notre expertise, de la conception à la performance, dans une démarche centrée sur l’expérience utilisateur, le parcours client et la conversion.
+                                    <br> <br>
+                                    Au fil des centaines de projets réalisés, nous avons bâti un socle technologique solide et une méthodologie éprouvée basée sur un travail collaboratif avec nos clients. Nos solutions digitales sont fiables, flexibles, créatives et performantes.
+                                    <br> <br>
+                                    Conscients des enjeux de votre business, nous nous engageons à vous proposer des solutions e-commerces adaptées à vos problématiques et nous vous conseillons sur la meilleure stratégie à adopter pour atteindre vos objectifs marketing et commerciaux.
+                                    <br> <br>
+                                    Tout au long de votre projet digital, nous restons pleinement à l’écoute de vos besoins, dans le respect de vos contraintes budgétaires, humaines et de délais.
+                                </span>
+                            </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="divider my-5"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <h4>The Options:</h4>
+                    <ul>
+                        <li> buttonClasses:'', ( String )</li>
+                        <li> maxcChar: 100, ( Number ) </li>
+                        <li> moreLink:"Read more", ( String )</li>
+                        <li> lessLink:"Read less", ( String )</li>
+                        <li> disabledLessLink: false ( Boolean )</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>
