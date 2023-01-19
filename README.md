@@ -15,6 +15,14 @@ Install npm
   npm install 
 ```
 
+## Demo
+
+```bash
+  npm run serve
+```
+
+Click the [link](http://localhost:3333/)
+
 ## Usage/Examples
 
 Once the library is installed, you can initialize it on your webpage by calling the readmore.render() method on the elements you want to have the "read more" functionality applied to. For example:
@@ -24,6 +32,7 @@ Once the library is installed, you can initialize it on your webpage by calling 
   import Readmore from '.src/js/readmore.js'
   
   window.addEventListener("DOMContentLoaded", (event) => {
+    // With default options ex:
     let readmore = new Readmore();
     readmore.render();
   });
@@ -41,7 +50,34 @@ Once the library is installed, you can initialize it on your webpage by calling 
     </div>
 ```
 
-In this example, the .content class is used as the target for the "read more" functionality. The data-readmore attribute is used to pass in options such as the speed of the animation, the collapsed height of the text, and the text for the "read more" and "read less" buttons. When the page loads, the text inside the div with a class of .content will be shortened and a "Read More" button will be appended to the end of the text. When the user clicks the "Read More" button, the full text will be revealed with a smooth animation.
+In this example, the .content class is used as the target for the "read more" functionality. The data-readmore attribute is used to pass in options such as the speed of the animation, the collapsed height of the text, and the text for the "read more" and "read less" buttons. When the page loads, the text inside the div with a class of .content will be shortened and a "Read More" button will be appended to the end of the text. When the user clicks the "Read More" button, the full text will be revealed.
+
+You can change values of options with 
+- Data attribute :
+```html
+   <div class="content" data-readmore='{
+        "buttonClasses": "btn",
+        "maxcChar":100, 
+        "moreLink":"Lire Plus",
+        lessLink:"Read less",
+        "disabledLessLink": true
+      }'>
+        <span>.....</span>
+    </div>
+```
+- js :
+
+```javascript
+    // Change default options ex:
+      let newOptions = {
+        buttonClasses:'btn',
+        maxcChar:100, 
+        moreLink:"Lire Plus",
+        disabledLessLink: true
+      };
+     let readmore = new Readmore(newOptions);
+     readmore.render();
+```
 
 ## The options:
 

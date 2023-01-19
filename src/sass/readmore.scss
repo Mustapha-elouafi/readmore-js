@@ -10,11 +10,6 @@
         &[class^="short-"] + span {
             display: none;
         }
-        br {
-            margin: 2px 0;
-            content: "";
-            display: block;
-        }
     }
 
     > label {
