@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="readmore.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>READMORE VANILLA JS</h1>
+    <h2>Demo</h2>
+    <div class="content" data-readmore='{ 
+        "length":100, 
+        "readmoreBtn": "Read more",
+        "readLessBtn": "Read less"
+    }'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a euismod congue, quam ante molestie nibh, non auctor nibh leo eget nisi. Sed eget neque euismod, viverra augue id, feugiat nibh.
+    </div>
+    <script src="readmore.js"></script>
+    <script>
+        import Readmore from 'readmore.js'
+  
+        window.addEventListener("DOMContentLoaded", (event) => {
+            let readmore = new Readmore();
+            readmore.render();
+        });
+    </script>
+</body>
+</html>
