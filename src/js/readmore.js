@@ -1,15 +1,40 @@
 export default class Readmore {
     
-    constructor(){
+    constructor(defaultOptions){
         this.selectors = document.querySelectorAll('[data-readmore]'); 
-        this.buttonClasses = 'btn btn-link border-0 c-btn--nopad u-txt-underline u-font-weight-bold u-txt-body u-mb-0';
+        this.options = {
+            buttonClasses:'',
+            maxcChar:100, 
+            moreLink:"Read more",
+            lessLink:"Read less",
+            disabledLessLink: false
+        };
+
+        if (typeof defaultOptions == 'object') {
+            this.default = {
+                ...this.options,
+                ...defaultOptions
+            }
+        } else {
+            this.default = this.options;
+        }
     }
 
     render() {
+ 
        
         this.selectors.forEach((element, index) => {
             
             let txtElement = element.querySelector('span:first-child');
+            
+            let settings = element.dataset.readmore !== '' ? JSON.parse(element.dataset.readmore) : '';
+
+            if (typeof settings == 'object' && Object.keys(settings).length) {
+                this.default = {
+                    ...this.default,
+                    ...settings
+                }
+            }
 
             if (this.isEllipsisActive(txtElement)) {
 
@@ -27,7 +52,7 @@ export default class Readmore {
     createShortDesc(parentElement, textElement, index) {
         let span = document.createElement("span")
             
-        let shortTxt = this.shortDescTxt(textElement.textContent,  JSON.parse(parentElement.dataset.readmore).length);
+        let shortTxt = this.shortDescTxt(textElement.textContent,  this.default.maxcChar);
         
         span.classList.add('short-'+index);
         span.textContent = shortTxt + '...';
@@ -46,21 +71,18 @@ export default class Readmore {
     
     createButtons(parentElement, index) {
         let label = document.createElement("label");
-        let options = JSON.parse(parentElement.dataset.readmore);
 
         let span = document.createElement('span');
 
         label.setAttribute('for', 'readmore-'+index);
-        label.setAttribute('class', this.buttonClasses);
+        label.setAttribute('class', this.default.buttonClasses);
 
-        if (typeof options.readmoreBtn !== "undefined") {
-            span.textContent = options.readmoreBtn;
-        }
+        span.textContent = this.default.moreLink;
 
 
-        if (typeof options.readLessBtn !== "undefined") {
+        if (!this.default.disabledLessLink) {
             let span = document.createElement('span');
-                span.textContent = options.readLessBtn;
+                span.textContent = this.default.lessLink;
 
             // Add read less button
             label.appendChild(span);

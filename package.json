@@ -1,0 +1,29 @@
+{
+  "name": "readomre",
+  "version": "1.0.0",
+  "description": "The Readmore.js class is a JavaScript class that is used to create a \"read more\" functionality on a webpage.  It allows users to view a shortened version of a piece of text and then expand it to view the full text by clicking a \"read more\" button.  The class uses the data-readmore attribute to target elements on the page that should have the \"read more\" functionality applied to them.  It also allows for customization of the \"read more\" and \"read less\" button text by passing in options through the data-readmore attribute.  The class uses methods such as render(), createButtons(), createInput(), createShortDesc() and isEllipsisActive() to implement the functionality.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mustapha-elouafi/readomre-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mustapha-elouafi/readomre-js/issues"
+  },
+  "homepage": "https://github.com/Mustapha-elouafi/readomre-js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

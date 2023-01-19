@@ -45,7 +45,9 @@ Once the library is installed, you can initialize it on your webpage by calling 
         "readmoreBtn": "Read more",
         "readLessBtn": "Read less"
     }'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a euismod congue, quam ante molestie nibh, non auctor nibh leo eget nisi. Sed eget neque euismod, viverra augue id, feugiat nibh.
+        <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a euismod congue, quam ante molestie nibh, non auctor nibh leo eget nisi. Sed eget neque euismod, viverra augue id, feugiat nibh.
+        </span>
     </div>
 ```
 
