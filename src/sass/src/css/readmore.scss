@@ -1,0 +1,61 @@
+[data-readmore]  {
+    > span {
+        &:nth-child(1):not([class^="short-"]) {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            white-space: nowrap;
+            display: inline-block;
+        }
+        &[class^="short-"] + span {
+            display: none;
+        }
+        br {
+            margin: 2px 0;
+            content: "";
+            display: block;
+        }
+    }
+
+    > label {
+        cursor: pointer;
+        span {
+            &:first-child {
+                display: none;
+                & + span {
+                    display: inline;
+                }
+            }
+            &:last-child {
+                display: inline;
+            }
+        }
+    }
+}
+
+input[class^="readmore-"] {
+    display: none;
+    &:checked + [data-readmore] {
+        > label span {
+            &:first-child {
+                display: inline;
+                & + span {
+                    display: none;
+                }
+            }
+            &:last-child {
+                display: none;
+            }
+            
+        }
+        > span {
+            white-space: normal;
+            display: inline;
+
+            &[class^="short-"] {
+                display: none;
+            }
+
+        }
+    }
+}
