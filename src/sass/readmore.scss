@@ -1,5 +1,5 @@
 [data-readmore]  {
-    > span {
+    & > span {
         &:nth-child(1):not([class^="short-"]) {
             overflow: hidden;
             text-overflow: ellipsis;
@@ -12,7 +12,7 @@
         }
     }
 
-    > label {
+    & > label {
         cursor: pointer;
         span {
             &:first-child {
@@ -31,7 +31,7 @@
 input[class^="readmore-"] {
     display: none;
     &:checked + [data-readmore] {
-        > label span {
+        & > label span {
             &:first-child {
                 display: inline;
                 & + span {
@@ -43,7 +43,7 @@ input[class^="readmore-"] {
             }
             
         }
-        > span {
+        & > span {
             white-space: normal;
             display: inline;
 
