@@ -1,5 +1,12 @@
+
+@use './settings' as *;
+
 [data-readmore]  {
+    font-family: $readmore-font-familly;
+    font-weight: $readmore-font-weight;
+    font-size: $readmore-font-size;
     & > span {
+        margin: $readmore-margin-y $readmore-margin-x;
         &:nth-child(1):not([class^="short-"]) {
             overflow: hidden;
             text-overflow: ellipsis;
@@ -7,13 +14,19 @@
             white-space: nowrap;
             display: inline-block;
         }
-        &[class^="short-"] + span {
-            display: none;
+        &[class^="short-"] {
+            display: #{$readmore-display};
+            & + span {
+                display: none;
+            }
         }
     }
 
     & > label {
         cursor: pointer;
+        font-family: $readmore-btn-font-familly;
+        font-weight: $readmore-btn-font-weight;
+        font-size: $readmore-btn-font-size;
         span {
             &:first-child {
                 display: none;
@@ -45,7 +58,7 @@ input[class^="readmore-"] {
         }
         & > span {
             white-space: normal;
-            display: inline;
+            display: #{$readmore-display};
 
             &[class^="short-"] {
                 display: none;

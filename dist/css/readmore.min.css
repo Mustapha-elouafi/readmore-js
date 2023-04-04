@@ -1,9 +1,12 @@
-[data-readmore] > span:first-child:not([class^=short-]) {
-  display: inline-block;
+[data-readmore] > span:nth-child(1):not([class^=short-]) {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
   width: 100%;
+  white-space: nowrap;
+  display: inline-block;
+}
+[data-readmore] > span[class^=short-] {
+  display: inline;
 }
 [data-readmore] > span[class^=short-] + span {
   display: none;
@@ -34,8 +37,8 @@ input[class^=readmore-]:checked + [data-readmore] > label span:last-child {
   display: none;
 }
 input[class^=readmore-]:checked + [data-readmore] > span {
-  display: inline;
   white-space: normal;
+  display: inline;
 }
 input[class^=readmore-]:checked + [data-readmore] > span[class^=short-] {
   display: none;

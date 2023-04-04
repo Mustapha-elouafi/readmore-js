@@ -45,7 +45,7 @@ module.exports = {
     "module": {
         "rules": [
             {
-                "test": /\.(sa|sc|c)ss$/,
+                "test": /\.s[ac]ss/,
                 "use": [
                     "style-loader",  
                     {
@@ -53,7 +53,6 @@ module.exports = {
                         options: { outputPath: 'css/', name: '[name].min.css'}
                     },
                     'sass-loader',
-                    "postcss-loader" ,// post process the compiled CSS
                 ]
             },
             {
